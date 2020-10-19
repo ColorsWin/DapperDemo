@@ -10,6 +10,9 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="ISqlAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="..\Dapper\TypeExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
