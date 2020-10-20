@@ -9,12 +9,11 @@
 *************************************************************************************/
 using Dapper;
 using Dapper.Contrib.Extensions;
-using DapperDemo.Model;
-using System.Data.Linq.Mapping;
-using System.Linq;
+using DapperExDemo.Model;
+//using System.Data.Linq.Mapping;
 using System.Reflection;
 
-namespace DapperDemo.Columns
+namespace DapperExDemo.Columns
 {
     class PropertyTypeMapManager
     {
@@ -34,7 +33,7 @@ namespace DapperDemo.Columns
         public static string OnGetColumnName(PropertyInfo property)
         {
             var columnName = property.Name;
-            var tempName = property.GetCustomAttribute<ColumnAttribute>()?.Name;
+            var tempName = property.GetCustomAttribute<ColumnAttribute>()?.ColumnName;
             if (!string.IsNullOrEmpty(columnName))
             {
                 columnName = tempName;

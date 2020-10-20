@@ -9,12 +9,12 @@
 *************************************************************************************/
 using Dapper;
 using Dapper.Contrib.Extensions;
-using DapperDemo.Model;
+using DapperExDemo.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 
-namespace DapperDemo.Dao
+namespace DapperExDemo.Dao
 {
     public class RoleDao : IBaseDao<Role>
     {

@@ -1,7 +1,7 @@
-﻿using DapperDemo.Test;
+﻿using DapperExDemo.Test;
 using System;
 
-namespace DapperDemo
+namespace DapperExDemo
 {
     class Program
     {
@@ -10,9 +10,7 @@ namespace DapperDemo
         {
             connetionString = "Data Source=|DataDirectory|\\DB\\Test.db; Pooling=true;Min Pool Size=1";
             TestRole.Ouput(connetionString);
-
             Console.Read();
         }
-
     }
 }

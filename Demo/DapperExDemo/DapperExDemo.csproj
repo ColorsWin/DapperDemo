@@ -7,8 +7,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2A894344-57E7-4056-A561-724F4173400A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DapperDemo</RootNamespace>
-    <AssemblyName>DapperDemo</AssemblyName>
+    <RootNamespace>DapperExDemo</RootNamespace>
+    <AssemblyName>DapperExDemo</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

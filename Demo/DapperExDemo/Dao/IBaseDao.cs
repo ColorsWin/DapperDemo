@@ -13,7 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DapperDemo.Dao
+namespace DapperExDemo.Dao
 {
     public interface IBaseDao<T>
     {

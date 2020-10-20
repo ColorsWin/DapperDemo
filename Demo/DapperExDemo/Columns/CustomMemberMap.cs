@@ -13,12 +13,12 @@ using System.Collections.Generic;
 using System.Data.Linq.Mapping;
 using System.Reflection;
 
-namespace DapperDemo.Columns
+namespace DapperExDemo.Columns
 {
     public class CustomTypeMap<T> : SqlMapper.ITypeMap
     {
         public ConstructorInfo FindConstructor(string[] names, Type[] types)
-        { 
+        {
             return null;
         }
 
@@ -50,13 +50,13 @@ namespace DapperDemo.Columns
                 var at = p.GetCustomAttribute<ColumnAttribute>();
                 if (at != null)
                 {
-                    if (!string.IsNullOrWhiteSpace(at.Name))
-                        _dict.Add(at.Name, p);
+                    if (!string.IsNullOrWhiteSpace(at.ColumnName))
+                        _dict.Add(at.ColumnName, p);
 
                 }
             }
         }
-    } 
+    }
     public class CustomMemberMap : SqlMapper.IMemberMap
     {
         public CustomMemberMap(string column, PropertyInfo propertyInfo)
@@ -71,6 +71,20 @@ namespace DapperDemo.Columns
         public FieldInfo Field { get; }
         public ParameterInfo Parameter { get; }
 
+    }
+
+    /// <summary>
+    /// 自定义列的属性 改为System.Data.Linq.Mapping.ColumnAttribute
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Property)]
+    public class ColumnAttribute : Attribute
+    {
+        public string ColumnName { get; }
+
+        public ColumnAttribute(string columnName)
+        {
+            ColumnName = columnName;
+        }
     }
 }
 

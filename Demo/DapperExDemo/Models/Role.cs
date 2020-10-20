@@ -1,18 +1,18 @@
 ﻿using Dapper.Contrib.Extensions;
-using DapperDemo.Columns;
+using DapperExDemo.Columns;
 using System.Collections.Generic;
 
 
-namespace DapperDemo.Model
+namespace DapperExDemo.Model
 {
     [Dapper.Contrib.Extensions.Table("Role")]
     public class Role
     {
         [ExplicitKey]
-        [System.Data.Linq.Mapping.ColumnAttribute(Name = "RoleId")]
+        [ColumnAttribute("RoleId")]
         public string Id { get; set; }
 
-        [System.Data.Linq.Mapping.ColumnAttribute(Name = "RoleName")]
+        [ColumnAttribute("RoleName")]
         public string Name { get; set; }
 
         [Write(false)]

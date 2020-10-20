@@ -8,14 +8,14 @@
 * 修 改 人：
 *************************************************************************************/
 using Dapper;
-using DapperDemo.Columns;
-using DapperDemo.Dao;
-using DapperDemo.Model;
+using DapperExDemo.Columns;
+using DapperExDemo.Dao;
+using DapperExDemo.Model;
 using System;
 using System.IO;
 using System.Linq;
 
-namespace DapperDemo.Test
+namespace DapperExDemo.Test
 {
     public class TestRole
     {

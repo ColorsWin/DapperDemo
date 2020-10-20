@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DapperDemo.Model
+namespace DapperExDemo.Model
 {
     /// <summary>
     /// 用户表
